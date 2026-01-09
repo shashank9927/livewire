@@ -8,11 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "server": "node server.js"
-},
+  },
   "dependencies": {
+    "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
     "sonner": "^2.0.7",
     "ws": "^8.18.3"
   },
