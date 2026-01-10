@@ -87,7 +87,7 @@ export default function ChatRoom({ roomId, connectionStatus, lastMessage, onSend
                     {messages.map((msg, index) => (
                         <div key={msg.id || index} className={`flex flex-col mb-2 ${userId === msg.userId ? 'items-end' : 'items-start'}`}>
                             <span className={`text-xs ${userId === msg.userId ? 'mr-1' : 'mr-0'}`}>{msg.username}</span>
-                            <span className='bg-gray-200 break-words dark:bg-gray-700 dark:text-white w-fit px-4 mr-1 rounded-xl h-fit p-2 mt-1 text-black'>
+                            <span className='bg-slate-700 text-white break-words w-fit px-4 mr-1 rounded-xl h-fit p-2 mt-1'>
                                 {msg.message}
                             </span>
                         </div>
