@@ -49,7 +49,7 @@ export default function JoinCreate({ connectionStatus, onCreateRoom, sendMessage
                 />
                 <button
                     onClick={handleJoinRoom}
-                    className="bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:hover:bg-gray-100 dark:text-black text-white py-2 px-4 rounded max-sm:rounded-lg"
+                    className="cursor-pointer bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:hover:bg-gray-100 dark:text-black text-white py-2 px-4 rounded max-sm:rounded-lg"
                     disabled={connectionStatus !== 'connected'}
                 >
                     Join Room
@@ -59,7 +59,7 @@ export default function JoinCreate({ connectionStatus, onCreateRoom, sendMessage
             <div className="pt-4 text-center">
                 <button
                     onClick={onCreateRoom}
-                    className="hover:bg-[#1E41B2] bg-blue-600 w-full text-white py-2 px-4 rounded max-sm:rounded-lg transition-all duration-500"
+                    className="cursor-pointer hover:bg-[#1E41B2] bg-blue-600 w-full text-white py-2 px-4 rounded max-sm:rounded-lg transition-all duration-500"
                     disabled={connectionStatus !== 'connected'}
                 >
                     Create Room

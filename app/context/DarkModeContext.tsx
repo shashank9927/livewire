@@ -14,11 +14,12 @@ interface DarkModeProviderProps {
 }
 
 const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
     useEffect(() => {
         const storedPreference = localStorage.getItem("theme");
-        const prefersDarkMode = storedPreference === "dark";
+        // Default to dark mode if no preference stored
+        const prefersDarkMode = storedPreference === null ? true : storedPreference === "dark";
 
         setIsDarkMode(prefersDarkMode);
 

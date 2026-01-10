@@ -29,7 +29,7 @@ export default function ChatRoom({ roomId, connectionStatus, lastMessage, onSend
     useEffect(() => {
         if (lastMessage && lastMessage.type === 'chat') {
             const messageId = lastMessage.payload.id;
-            
+
             if (messageId && processedMessageIds.current.has(messageId)) {
                 return;
             }
@@ -104,7 +104,7 @@ export default function ChatRoom({ roomId, connectionStatus, lastMessage, onSend
                     />
                     <button
                         onClick={handleSendMessage}
-                        className="hover:bg-[#1E41B2] bg-blue-600 text-white py-2 px-4 rounded-lg ml-2"
+                        className="cursor-pointer hover:bg-[#1E41B2] bg-blue-600 text-white py-2 px-4 rounded-lg ml-2"
                     >
                         Send
                     </button>
