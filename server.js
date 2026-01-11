@@ -4,10 +4,9 @@ import crypto from 'crypto';
 
 const PORT = process.env.PORT || 8080;
 
-// Create HTTP server first (required for Render)
+
 const httpServer = createServer();
 
-// Attach Socket.IO to the HTTP server
 const io = new Server(httpServer, {
     cors: {
         origin: '*',
@@ -122,7 +121,7 @@ io.on('connection', (socket) => {
     });
 });
 
-// CRITICAL: Start the HTTP server (required for Render to detect the port)
-httpServer.listen(PORT, () => {
+
+httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`Socket.IO server is running on port ${PORT}`);
 });
