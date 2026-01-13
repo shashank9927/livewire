@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import ChatRoom from './components/ChatRoom'
 import JoinCreate from './components/JoinCreate'
+import ServerWakeUp from './components/ServerWakeUp'
 import { useWebSocket } from './hooks/useWebSocket'
 import { toast } from 'sonner'
 import LiveWireIcon from './components/icons/LiveWireIcon'
@@ -38,6 +39,19 @@ export default function Home() {
       setRoomId(null)
       toast.success('Left room successfully')
     }
+  }
+
+  // Show loading screen when connecting or disconnected
+  if (connectionStatus !== 'connected') {
+    return (
+      <main className="flex min-h-[90vh] flex-col items-center justify-center p-0 max-sm:p-4">
+        <h1 className="text-4xl font-bold mb-8 flex space-x-3 items-center">
+          <span><LiveWireIcon size={32} color="#01ff04" /></span>
+          <span>LiveWire</span>
+        </h1>
+        <ServerWakeUp />
+      </main>
+    )
   }
 
   return (
