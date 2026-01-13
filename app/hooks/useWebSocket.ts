@@ -37,7 +37,7 @@ export function useWebSocket() {
         })
 
         socket.current.on('connect_error', () => {
-            toast.error('Socket.IO connection error')
+            // toast.error('Socket.IO connection error')
             setConnectionStatus('disconnected')
         })
 
@@ -94,4 +94,5 @@ export function useWebSocket() {
 
     return { connectionStatus, lastMessage, sendMessage }
 }
+
 
